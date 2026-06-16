@@ -1,0 +1,28 @@
+class BankAccount:
+    __balance = 10000
+
+    def deposit(self, amount):
+        self.__balance += amount
+        print(self.__balance)
+
+    def withdraw(self, amount):
+        if amount > self.__balance:
+            print("Insufficient")
+        else:
+            self.__balance -= amount
+            print(self.__balance)
+
+    def get_balance(self):
+        print("Current balance:", self.__balance)
+
+
+a1 = BankAccount()
+a2 = BankAccount()
+
+a1.deposit(2000)
+a1.withdraw(1000)
+a1.get_balance()
+
+a2.deposit(2500)
+a2.withdraw(500)
+a2.get_balance()
