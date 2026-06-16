@@ -1,0 +1,27 @@
+class InvalidAgeError(Exception):
+    pass
+
+class InvalidMarksError(Exception):
+    pass
+
+try:
+    name = input("Name: ")
+    age = int(input("Age: "))
+    marks = int(input("Marks: "))
+
+    if age < 15 or age > 30:
+        raise InvalidAgeError("Invalid Age")
+
+    if marks < 0 or marks > 100:
+        raise InvalidMarksError("Invalid Marks")
+
+    print("Student registered successfully!")
+
+except InvalidAgeError as e:
+    print(e)
+
+except InvalidMarksError as e:
+    print(e)
+
+finally:
+    print("Registration Process Complete")
