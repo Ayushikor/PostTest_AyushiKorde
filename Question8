@@ -1,0 +1,22 @@
+import os
+
+with open("employees.txt", "w") as f:
+    f.write("Aman 30000\n")
+    f.write("Riya 35000\n")
+    f.write("Ayushi 40000\n")
+    f.write("Rohan 32000\n")
+    f.write("Priya 45000\n")
+
+with open("employees.txt", "r") as f:
+    print(f.read())
+
+with open("employees.txt", "a") as f:
+    f.write("Anjali 38000\n")
+    f.write("Rahul 42000\n")
+
+with open("employees.txt", "r") as f:
+    print(f.read())
+
+print(os.path.exists("employees.txt"))
+
+os.remove("employees.txt")
