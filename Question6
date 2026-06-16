@@ -1,0 +1,8 @@
+list = ["Bhopal","Indore","Nagpur","Mumbai","Gujrat","Pune","Raipur","Jaipure"]
+print(list[:4])
+print(list[4:])
+print(list.append("Delhi"))
+print(list.pop(0))
+
+tuple_city = tuple(list)
+print(tuple_city)
