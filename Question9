@@ -1,0 +1,20 @@
+import json
+
+students = [
+    {"name":"Ayushi","age":20,"city":"Bhopal","course":"BTech","marks":85},
+    {"name":"Riya","age":21,"city":"Indore","course":"BCA","marks":75},
+    {"name":"Rohan","age":22,"city":"Delhi","course":"MCA","marks":65},
+    {"name":"Aman","age":20,"city":"Mumbai","course":"BTech","marks":90}
+]
+
+with open("students.json","w") as f:
+    json.dump(students,f,indent=4)
+
+with open("students.json","r") as f:
+    data = json.load(f)
+
+for student in data:
+    if student["marks"] > 70:
+        print(student)
+
+print("Total Students:", len(data))
