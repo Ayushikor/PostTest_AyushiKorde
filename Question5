@@ -1,0 +1,16 @@
+try:
+    file = input("Enter filename: ")
+
+    with open(file, "r") as f:
+        lines = f.readlines()
+
+        if len(lines) == 0:
+            print("File is empty!")
+        else:
+            print("Total Lines:", len(lines))
+
+except FileNotFoundError:
+    print("File does not exist!")
+
+finally:
+    print("Operation complete!")
