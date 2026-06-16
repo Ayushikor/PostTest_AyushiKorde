@@ -1,0 +1,31 @@
+students = {
+    "Ayushi",
+    "Riya",
+    "Rohan",
+    "Aman",
+    "Ayushi",
+    "Riya"
+}
+
+print(students)
+
+students.add("Anjali")
+students.add("Priya")
+
+marks = {
+    "Ayushi": 85,
+    "Riya": 70,
+    "Rohan": 55,
+    "Aman": 90
+}
+
+for name, score in marks.items():
+
+    if score >= 75:
+        print(name, "Distinction")
+
+    elif score >= 60:
+        print(name, "Pass")
+
+    else:
+        print(name, "Fail")
