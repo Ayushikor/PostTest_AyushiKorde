@@ -1,0 +1,23 @@
+import requests
+import json
+
+try:
+    respone = requests.get("https://jsonplaceholder.typicode.com/users")
+
+
+    if respone.status.code == 200:
+        users = respone.json()
+
+        for user in users:
+            print(user["name"])
+            print(user["Email"])
+            print(user["Phone"])
+
+        with open("user.json", "w")as f:
+            json.dump(users,f,indent = 4)
+
+
+        print("Total User", len(users))
+
+except Exception:
+    print("Exception")
