@@ -1,0 +1,28 @@
+from abc import ABC,abstractmethod
+class Payment(ABC):
+    @abstractmethod
+    def pay(self):
+        pass
+    def receipt(self):
+        pass
+
+class GPay(Payment):
+    def pay(self):
+        print("Pay via GPay")
+    def receipt(self):
+        print("GPay gives receipt")
+
+class CreditCard(Payment):
+    def pay(self):
+        print("Pay via Credit Card")
+    def receipt(self):
+        print("get receipt from Credit Card")
+
+g = GPay()
+c = CreditCard()
+
+g.pay()
+g.receipt()
+
+c.pay()
+c.receipt()
